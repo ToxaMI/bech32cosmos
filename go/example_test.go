@@ -36,8 +36,6 @@ func ExampleEncode() {
 	if err != nil {
 		fmt.Println("Error:", err)
 	}
-	fmt.Println("Encoded")
-	fmt.Println(encoded)
 	_, _, err = bech32cosmos.Decode(encoded)
 	if err != nil {
 		fmt.Println("Error:", err)
