@@ -34,7 +34,7 @@ func Decode(bech string) (string, []byte, error) {
 	// We'll work with the lowercase string from now on.
 	bech = lower
 
-	// The string is invalid if the last '1' is non-existent, it is the
+	// The string is invalid if the last ':' is non-existent, it is the
 	// first character of the string (no human-readable part) or one of the
 	// last 6 characters of the string (since checksum cannot contain '1'),
 	// or if the string is more than 90 characters in total.
@@ -42,11 +42,9 @@ func Decode(bech string) (string, []byte, error) {
 	if sep < 1 || sep+7 > len(bech) {
 		return "", nil, fmt.Errorf("invalid index of %s", string(seperator))
 	}
-
-	// The human-readable part is everything before the last '1'.
+	// The human-readable part is everything before the last ':'.
 	hrp := bech[:sep]
 	data := bech[sep+1:]
-
 	// Each character corresponds to the byte with value of the index in
 	// 'charset'.
 	decoded, err := toBytes(data)
@@ -76,6 +74,7 @@ func Decode(bech string) (string, []byte, error) {
 // (base32).
 func Encode(hrp string, data []byte) (string, error) {
 	// Calculate the checksum of the data and append it at the end.
+	hrp = strings.ToLower(hrp)
 	checksum := bech32Checksum(hrp, data)
 	combined := append(data, checksum...)
 

@@ -1,7 +1,3 @@
-// Copyright (c) 2017 The btcsuite developers
-// Use of this source code is governed by an ISC
-// license that can be found in the LICENSE file.
-
 package bech32cosmos_test
 
 import (
@@ -40,10 +36,15 @@ func ExampleEncode() {
 	if err != nil {
 		fmt.Println("Error:", err)
 	}
-
+	fmt.Println("Encoded")
+	fmt.Println(encoded)
+	_, _, err = bech32cosmos.Decode(encoded)
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
 	// Show the encoded data.
 	fmt.Println("Encoded Data:", encoded)
 
 	// Output:
-	// Encoded Data: customHrp!11111q:23jhxapqv3shgcgumastr
+	// Encoded Data: customhrp!11111q:23jhxapqv3shgcgkxpuhe
 }
