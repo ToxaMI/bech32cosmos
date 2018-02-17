@@ -30,7 +30,7 @@ fixtures.bech32.valid.forEach((f) => {
     t.plan(1)
 
     let buffer = Buffer.from(f.string, 'utf8')
-    buffer[f.string.lastIndexOf('1') + 1] ^= 0x1 // flip a bit, after the prefix
+    buffer[f.string.lastIndexOf(':') + 1] ^= 0x1 // flip a bit, after the prefix
     let string = buffer.toString('utf8')
     t.throws(function () {
       bech32.decode(string, f.limit)

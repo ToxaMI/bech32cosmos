@@ -14,37 +14,37 @@
   "bech32": {
     "valid": [
       {
-        "string": "A12UEL5L",
+        "string": "A:2UEL5L",
         "prefix": "A",
         "hex": "",
         "words": []
       },
       {
-        "string": "an83characterlonghumanreadablepartthatcontainsthenumber1andtheexcludedcharactersbio1tt5tgs",
+        "string": "an83characterlonghumanreadablepartthatcontainsthenumber1andtheexcludedcharactersbio:tt5tgs",
         "prefix": "an83characterlonghumanreadablepartthatcontainsthenumber1andtheexcludedcharactersbio",
         "hex": "",
         "words": []
       },
       {
-        "string": "abcdef1qpzry9x8gf2tvdw0s3jn54khce6mua7lmqqqxw",
+        "string": "abcdef:qpzry9x8gf2tvdw0s3jn54khce6mua7lmqqqxw",
         "prefix": "abcdef",
         "hex": "00443214c74254b635cf84653a56d7c675be77df",
         "words": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
       },
       {
-        "string": "11qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqc8247j",
+        "string": "1:qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqc8247j",
         "prefix": "1",
         "hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
         "words": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
       },
       {
-        "string": "split1checkupstagehandshakeupstreamerranterredcaperred2y9e3w",
+        "string": "split:checkupstagehandshakeupstreamerranterredcaperred2y9e3w",
         "prefix": "split",
         "hex": "c5f38b70305f519bf66d85fb6cf03058f3dde463ecd7918f2dc743918f2d",
         "words": [24,23,25,24,22,28,1,16,11,29,8,25,23,29,19,13,16,23,29,22,25,28,1,16,11,3,25,29,27,25,3,3,29,19,11,25,3,3,25,13,24,29,1,25,3,3,25,13]
       },
       {
-        "string": "11qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq978ear",
+        "string": "1:qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq978ear",
         "prefix": "1",
         "hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
         "words": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -53,44 +53,40 @@
     ],
     "invalid": [
       {
-        "string": "A12Uel5l",
-        "exception": "Mixed-case string A12Uel5l"
-      },
-      {
-        "string": " 1nwldj5",
+        "string": " :nwldj5",
         "exception": "Invalid prefix \\( \\)"
       },
       {
-        "string": "abc1rzg",
-        "exception": "abc1rzg too short"
+        "string": "abc:rzg",
+        "exception": "abc:rzg too short"
       },
       {
-        "string": "an84characterslonghumanreadablepartthatcontainsthenumber1andtheexcludedcharactersbio1569pvx",
+        "string": "an84characterslonghumanreadablepartthatcontainsthenumber:andtheexcludedcharactersbio1569pvx",
         "exception": "Exceeds length limit"
       },
       {
-        "string": "x1b4n0q5v",
+        "string": "x:b4n0q5v",
         "exception": "Unknown character b"
       },
       {
-        "string": "1pzry9x0s0muk",
-        "exception": "Missing prefix for 1pzry9x0s0muk"
+        "string": ":pzry9x0s0muk",
+        "exception": "Missing prefix for :pzry9x0s0muk"
       },
       {
         "string": "pzry9x0s0muk",
         "exception": "No separator character for pzry9x0s0muk"
       },
       {
-        "string": "1pzry9x0s0muk",
-        "exception": "Missing prefix for 1pzry9x0s0muk"
+        "string": ":pzry9x0s0muk",
+        "exception": "Missing prefix for :pzry9x0s0muk"
       },
       {
-        "string": "abc1rzgt4",
+        "string": "abc:rzgt4",
         "exception": "Data too short"
       },
       {
-        "string": "s1vcsyn",
-        "exception": "s1vcsyn too short"
+        "string": "s:vcsyn",
+        "exception": "s:vcsyn too short"
       },
       {
         "prefix": "abc",
@@ -114,7 +110,7 @@
         "exception": "Exceeds length limit"
       },
       {
-        "string": "11qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqc8247j",
+        "string": "1:qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqc8247j",
         "exception": "Exceeds length limit"
       },
       {
@@ -123,12 +119,8 @@
         "exception": "Invalid prefix \\(abc\u00ff\\)"
       },
       {
-        "string": "li1dgmt3",
+        "string": "li:dgmt3",
         "exception": "Data too short"
-      },
-      {
-        "stringHex": "6465316c67377774ff",
-        "exception": "Unknown character "
       }
     ]
   }

@@ -1,23 +1,23 @@
 {
-  "name": "bech32",
-  "version": "1.1.3",
-  "description": "Bech32 encoding / decoding",
+  "name": "bech32cosmos",
+  "version": "0.1.0",
+  "description": "Bech32Cosmos encoding / decoding",
   "keywords": [
     "base32",
     "bech32",
-    "bitcoin",
     "crypto",
     "crytography",
     "decode",
     "decoding",
     "encode",
-    "encoding"
+    "encoding",
+    "cosmos"
   ],
   "main": "index.js",
   "files": [
     "index.js"
   ],
-  "license": "MIT",
+  "license": "APACHE2",
   "dependencies": {},
   "devDependencies": {
     "nyc": "^10.2.0",
@@ -26,7 +26,7 @@
     "tap-dot": "*"
   },
   "repository": {
-    "url": "http://github.com/bitcoinjs/bech32",
+    "url": "https://github.com/cosmos/bech32cosmos",
     "type": "git"
   },
   "scripts": {

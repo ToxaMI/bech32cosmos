@@ -1,5 +1,6 @@
 'use strict'
-var ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l'
+var ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
+var separator = ':';
 
 // pre-compute lookup table
 var ALPHABET_MAP = {}
@@ -45,7 +46,7 @@ function encode (prefix, words, LIMIT) {
 
   // determine chk mod
   var chk = prefixChk(prefix)
-  var result = prefix + '1'
+  var result = prefix + separator 
   for (var i = 0; i < words.length; ++i) {
     var x = words[i]
     if ((x >> 5) !== 0) throw new Error('Non 5-bit word')
@@ -74,11 +75,9 @@ function decode (str, LIMIT) {
 
   // don't allow mixed case
   var lowered = str.toLowerCase()
-  var uppered = str.toUpperCase()
-  if (str !== lowered && str !== uppered) throw new Error('Mixed-case string ' + str)
   str = lowered
 
-  var split = str.lastIndexOf('1')
+  var split = str.lastIndexOf(separator)
   if (split === -1) throw new Error('No separator character for ' + str)
   if (split === 0) throw new Error('Missing prefix for ' + str)
 
