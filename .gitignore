@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs
+/csharp/.vs
+/csharp/Bech32/bin/Debug/netstandard2.0
+/csharp/Bech32/obj
+/csharp/Bech32.Test/bin/Debug
+/csharp/Bech32.Test/obj/Debug
+/csharp/packages
